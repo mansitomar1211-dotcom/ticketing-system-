@@ -118,9 +118,6 @@ AI Recommendation Engine:
 ```bash
 python scripts/start_api.py
 ```
-- 🌐 API available at: http://localhost:8000
-- 📚 Interactive docs: http://localhost:8000/docs
-- 🏥 Health check: http://localhost:8000/health
 
 **Terminal 2 - Start AI Agent:**
 
@@ -249,36 +246,6 @@ Agent: [Shows related tickets and their resolutions]
     What are trending issues this week?
     ```
 
-## 🧪 Comprehensive Testing
-### Run All Tests
- **Try AI Features**:
-
-    ``` bash
-    python scripts/run_tests.py
-    ```
-**Enhanced Test Categories**:
-
-   ```bash
-    # All API tests including recommendations
-python scripts/run_tests.py --api
-
-# Agent tools with recommendation features  
-python scripts/run_tests.py tests/test_agent_tools.py
-
-# Recommendation engine tests
-python scripts/run_tests.py tests/test_recommendations.py
-
-# Complete integration tests
-python scripts/run_tests.py --integration
-
-# With detailed coverage report
-python scripts/run_tests.py --coverage --html-report
-
-# Fast parallel execution
-python scripts/run_tests.py --fast --verbose
-  ```
-
-
 
 ## 🚀 Running in Notebook Environment
 ### For Jupyter/Databricks users, follow these steps:
@@ -341,8 +308,6 @@ python scripts/start_agent.py
 > What are the trending problems this week?
 > Find similar tickets about printer connectivity
 
-# 5. Run comprehensive test suite
-> test
 
 # 🎉 Explore the intelligent ticketing system!
  ```
