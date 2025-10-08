@@ -61,6 +61,10 @@ class TicketingAgent:
             
             if function_name == "create_ticket":
                 return self.ticketing_tools.create_ticket(**arguments)
+            elif function_name == "create_ticket_with_recommendations":
+                return self.ticketing_tools.create_ticket_with_recommendations(**arguments)
+            elif function_name == "get_recommendations":
+                return self.ticketing_tools.get_recommendations(**arguments)
             elif function_name == "get_tickets":
                 return self.ticketing_tools.get_tickets(**arguments)
             elif function_name == "get_ticket_by_id":
@@ -69,6 +73,10 @@ class TicketingAgent:
                 return self.ticketing_tools.update_ticket(**arguments)
             elif function_name == "delete_ticket":
                 return self.ticketing_tools.delete_ticket(**arguments)
+            elif function_name == "get_trending_issues":
+                return self.ticketing_tools.get_trending_issues(**arguments)
+            elif function_name == "search_similar_tickets":
+                return self.ticketing_tools.search_similar_tickets(**arguments)
             else:
                 logger.error(f"Unknown function: {function_name}")
                 return {
