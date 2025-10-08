@@ -10,7 +10,7 @@ from fastapi import APIRouter, Query, HTTPException
 from fastapi.responses import JSONResponse
 
 from .database import ticket_db
-from .exceptions import TicketNotFoundError, InvalidStatusError, ValidationError
+from .exception import TicketNotFoundError, InvalidStatusError, ValidationError
 from .models import (
     Ticket, 
     TicketCreate, 
