@@ -10,7 +10,7 @@ from fastapi import Request, Response
 from starlette.middleware.base import BaseHTTPMiddleware
 
 from config.settings import api_settings
-from .exceptions import SimulatedServerError
+from .exception import SimulatedServerError
 
 
 class NetworkSimulationMiddleware(BaseHTTPMiddleware):
