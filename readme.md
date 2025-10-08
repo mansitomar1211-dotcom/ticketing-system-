@@ -88,8 +88,6 @@ AI Recommendation Engine:
     │   ├── test_api.py
     │   └── test_integration.py/
     │ 
-    ├── .env.example
-    ├── .gitignore
     ├── pyproject.toml
     ├── requirement-dev.txt
     └── requirement.txt
@@ -101,6 +99,7 @@ AI Recommendation Engine:
 - **Python 3.8+** (Recommended: Python 3.9 or higher)
 - **pip** (Python package installer)
 - **Internet connection** (for Azure OpenAI API calls)
+- **Add OPENAI LLM key** ( to config/setting.py)
 
 ### Installation
 
