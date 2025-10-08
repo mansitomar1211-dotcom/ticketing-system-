@@ -81,13 +81,6 @@ AI Recommendation Engine:
     │   ├── start_agent.py
     │   └── start_api.py/
     │ 
-    ├── tests/
-    │   ├── __init.py.py
-    │   ├── conftest.py
-    │   ├── test_agent_tools.py
-    │   ├── test_api.py
-    │   └── test_integration.py/
-    │ 
     ├── pyproject.toml
     ├── requirement-dev.txt
     └── requirement.txt
