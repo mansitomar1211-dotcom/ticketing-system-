@@ -86,7 +86,6 @@ AI Recommendation Engine:
 ### Prerequisites
 - **Python 3.8+** (Recommended: Python 3.9 or higher)
 - **pip** (Python package installer)
-- **Internet connection** (for Azure OpenAI API calls)
 - **Add OPENAI LLM key** ( to config/setting.py) line 34 api_key = ""
 
 ### Installation
