@@ -78,7 +78,6 @@ AI Recommendation Engine:
     │ 
     │ 
     ├── pyproject.toml
-    ├── requirement-dev.txt
     └── requirement.txt
 
 
@@ -88,7 +87,7 @@ AI Recommendation Engine:
 - **Python 3.8+** (Recommended: Python 3.9 or higher)
 - **pip** (Python package installer)
 - **Internet connection** (for Azure OpenAI API calls)
-- **Add OPENAI LLM key** ( to config/setting.py)
+- **Add OPENAI LLM key** ( to config/setting.py) line 34 api_key = ""
 
 ### Installation
 
@@ -103,10 +102,6 @@ AI Recommendation Engine:
     pip install -r requirements.txt
     ```
 
-3. **Install development dependencies (optional, for testing)**:
-    ```bash
-    pip install -r requirements-dev.txt
-    ```
 
 ### Running the System
 
@@ -221,21 +216,6 @@ Agent: [Shows related tickets and their resolutions]
 - Built-in Retry Logic: Automatic recovery from LLM service failures
 
 
-## 🎯 Comprehensive Demo Guide
-### Quick Demo (5 minutes)
-
-1. **Start Services**:
-    ```bash
-   python scripts/start_api.py
-   python scripts/start_agent.py
-    ```
-2. **Try AI Features**:
-    ```bash
-    Create a ticket about printer issues and show recommendations
-    What are trending issues this week?
-    ```
-
-
 ## 🚀 Running in Notebook Environment
 ### For Jupyter/Databricks users, follow these steps:
 
@@ -282,21 +262,6 @@ Agent: [Shows related tickets and their resolutions]
     ```
 
 ## 🚀 Getting Started Now!
- ```python
-# 1. Install dependencies
-pip install -r requirements.txt
-
-# 2. Start API (Terminal 1)
-python scripts/start_api.py
-
-# 3. Start Enhanced Agent (Terminal 2)  
-python scripts/start_agent.py
-
-# 4. Try AI-powered features
-> Create a ticket about network issues and show me recommendations
-> What are the trending problems this week?
-> Find similar tickets about printer connectivity
-
 
 # 🎉 Explore the intelligent ticketing system!
  ```
