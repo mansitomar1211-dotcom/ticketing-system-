@@ -1,6 +1,5 @@
-"""
-Conversational AI agent for ticketing system interactions.
-"""
+
+"""Conversational AI agent for ticketing system interactions."""
 import json
 import logging
 from typing import List, Dict, Any, Optional
@@ -222,7 +221,7 @@ class TicketingAgent:
         if not self.conversation_history:
             return "No conversation history."
         
-        summary = f"Conversation with {len(self.conversation_history)} exchanges:\n"
+        summary = f"Conversation with {len(self.conversation_history)} exchanges:\\n"
         
         # Show last 6 messages
         recent_messages = self.conversation_history[-6:]
@@ -232,3 +231,44 @@ class TicketingAgent:
             
             if content:
                 preview = content[:100] + "..." if len(content) > 100 else content
+                summary += f"{i}. {role}: {preview}\\n"
+            elif msg.get("tool_calls"):
+                # Show function calls
+                tool_names = [tc["function"]["name"] for tc in msg["tool_calls"]]
+                summary += f"{i}. {role}: Called functions: {', '.join(tool_names)}\\n"
+        
+        return summary
+    
+    def test_connection(self) -> bool:
+        """
+        Test connections to both LLM and API services.
+        
+        Returns:
+            True if both connections are working
+        """
+        try:
+            # Test LLM connection
+            llm_ok = self.llm_client.test_connection()
+            
+            # Test API connection
+            try:
+                import requests
+                response = requests.get(f"{self.api_client.base_url}/health", timeout=5)
+                api_ok = response.status_code == 200
+            except Exception as e:
+                logger.error(f"API connection test failed: {e}")
+                api_ok = False
+            
+            logger.info(f"Connection test - LLM: {'OK' if llm_ok else 'FAILED'}, API: {'OK' if api_ok else 'FAILED'}")
+            return llm_ok and api_ok
+            
+        except Exception as e:
+            logger.error(f"Connection test error: {e}")
+            return False
+
+
+# # Write the complete file
+# with open('agent/conversational_agent.py', 'w') as f:
+#     f.write(conversational_agent_complete)
+
+# print("✅ Complete conversational_agent.py file created")
