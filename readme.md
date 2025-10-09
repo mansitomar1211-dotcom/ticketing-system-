@@ -76,10 +76,6 @@ AI Recommendation Engine:
     │   ├── _init__.py
     │   └── settings.py/
     │ 
-    ├── scripts/
-    │   ├── run_tests.py
-    │   ├── start_agent.py
-    │   └── start_api.py/
     │ 
     ├── pyproject.toml
     ├── requirement-dev.txt
@@ -113,18 +109,11 @@ AI Recommendation Engine:
     ```
 
 ### Running the System
-**Terminal 1 - Start API Server:**
-
-```bash
-python scripts/start_api.py
-```
-
-**Terminal 2 - Start AI Agent:**
 
 **Start API:**
 
 ```bash
-python -m api.main
+python -m api.main 
 ```
 
 **Start Agent:**
